@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DigitalCurrencyPublisher
+Bundle-SymbolicName: DigitalCurrencyPublisher
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.mtit.prj.service.ServiceActivator
+Export-Package: com.mtit.prj.service
+Import-Package: org.osgi.framework
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+

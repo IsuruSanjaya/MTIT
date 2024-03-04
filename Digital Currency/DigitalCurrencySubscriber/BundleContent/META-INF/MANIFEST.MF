@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DigitalCurrencySubscriber
+Bundle-SymbolicName: DigitalCurrencySubscriber
+Bundle-Activator: ServiceActivator
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: com.mtit.prj.service,
+ org.osgi.framework
+
