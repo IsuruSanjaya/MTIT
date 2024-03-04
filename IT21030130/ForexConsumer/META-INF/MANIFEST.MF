@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ForeXSubscriber
+Bundle-SymbolicName: ForexConsumer
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: forexconsumer.ForexConsumerActivator
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Automatic-Module-Name: ForeXSubscriber
+Import-Package: forexproducer,
+ org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy
