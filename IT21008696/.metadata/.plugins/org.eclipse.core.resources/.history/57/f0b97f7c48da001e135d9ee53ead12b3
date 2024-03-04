@@ -1,0 +1,5 @@
+package stockmarketproducer;
+
+public interface Stock {
+
+}

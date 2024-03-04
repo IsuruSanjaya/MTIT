@@ -1,0 +1,17 @@
+package stockmarketproducer;
+
+public class StocksImpl implements Stock{
+
+	@Override
+	public String publishService() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void enterMarketBook() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
