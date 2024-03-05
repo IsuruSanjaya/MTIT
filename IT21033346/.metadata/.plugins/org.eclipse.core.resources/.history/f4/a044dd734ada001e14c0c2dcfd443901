@@ -1,0 +1,5 @@
+package paymentgatewayproducer;
+
+public interface PaymentPublish {
+
+}

@@ -1,0 +1,5 @@
+package paymentgatewayproducer;
+
+public class PaymentMethodsImpl implements PaymentPublish {
+
+}

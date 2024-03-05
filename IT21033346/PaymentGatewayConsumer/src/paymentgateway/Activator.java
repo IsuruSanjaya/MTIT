@@ -1,0 +1,37 @@
+package paymentgateway;
+
+import org.osgi.framework.BundleActivator;
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceReference;
+import paymentgatewayproducer.PaymentPublish;
+
+public class Activator implements BundleActivator {
+
+	private static BundleContext context;
+	ServiceReference paymentReference;
+	
+
+	static BundleContext getContext() {
+		return context;
+	}
+	
+	@Override
+	public void start(BundleContext bundleContext) throws Exception {
+		System.out.println("Payment  Consumer Started");
+		paymentReference=bundleContext.getServiceReference(PaymentPublish.class.getName());
+
+		PaymentPublish paymentPublish=(PaymentPublish) bundleContext.getService(paymentReference);
+		paymentPublish.selectPaymentMethod();
+		System.out.println("started");
+		
+	}
+	
+	@Override
+	public void stop(BundleContext bundleContext) throws Exception {
+		System.out.println("Payment Consumer Stopped");
+		bundleContext.ungetService(paymentReference);
+		System.out.println("stopped");
+
+	}
+
+}
