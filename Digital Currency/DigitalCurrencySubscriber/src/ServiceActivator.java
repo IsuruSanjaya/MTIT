@@ -16,12 +16,15 @@ public class ServiceActivator implements BundleActivator {
 	    public void start(BundleContext context) throws Exception {
 	        System.out.println("-------Online currency subscriber activated--------");
 	        System.out.println("");
+	        serviceReference = context.getServiceReference(ConvertCurrencyService.class.getName());
+	        ConvertCurrencyService service = (ConvertCurrencyService) context.getService(serviceReference);
+	        
+	        
 	        System.out.println("-----------------------------------");
 	        System.out.println("      ONLINE CURRENCY");
 	        System.out.println("-----------------------------------");
 
-	        serviceReference = context.getServiceReference(ConvertCurrencyService.class.getName());
-	        ConvertCurrencyService service = (ConvertCurrencyService) context.getService(serviceReference);
+	        
 
 	        Scanner scanner = new Scanner(System.in);
 
@@ -137,13 +140,17 @@ public class ServiceActivator implements BundleActivator {
 	        
 	        System.out.println("Do you want to pay using a card? (yes/no)");
             String answer = scanner.next();
-            payWithCard = answer.equalsIgnoreCase("yes");
             
-            System.out.println("Redirecting to our payments gateway");
-            System.out.println("----------------------------------");
-
+            if (answer == "yes") {
+            	System.out.println("Redirecting to our payments gateway");
+                System.out.println("----------------------------------");
+            }else {
+            	System.out.println("Redirecting to Home");
+                System.out.println("----------------------------------");
+            }
+            
 	        scanner.close();
-	        Thread.sleep(10000000);
+	        Thread.sleep(1000);
 	        
 	        }
 	    }
